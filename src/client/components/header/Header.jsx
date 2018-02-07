@@ -19,14 +19,11 @@ const Header = (props) => {
 
   return (
     <header className={styles.header}>
-      <div>
-        <span>React SSR</span>
-        <img
-          alt="react"
-          style={styles.logo}
-          src={ReactLogo}
-        />
-      </div>
+      <img
+        className={styles.logo}
+        alt="react"
+        src={ReactLogo}
+      />
 
       <Menu pathname={pathname}>
         <MenuItem to="/">
