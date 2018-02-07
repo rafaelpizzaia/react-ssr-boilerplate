@@ -1,0 +1,17 @@
+@import 'partials/colors';
+@import 'partials/fonts';
+
+* {
+  box-sizing: border-box;
+  font-size: 22px;
+}
+
+body {
+  margin: 0;
+}
+
+.main {
+  margin-top: 60px;
+  min-height: calc(100vh - 60px);
+  width: 100%;
+}

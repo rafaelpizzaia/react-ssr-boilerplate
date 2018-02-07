@@ -1,0 +1,19 @@
+@import 'partials/colors';
+
+.button {
+  background-color: transparent;
+  border: 2px solid $dark-blue;
+  border-radius: 6px;
+  color: $dark-blue;
+  cursor: pointer;
+  font-weight: bold;
+  height: 40px;
+  outline: none;
+  padding: 0 10px;
+  transition: 0.3s all ease-in-out;
+  width: auto;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}

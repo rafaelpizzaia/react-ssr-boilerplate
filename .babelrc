@@ -1,0 +1,15 @@
+{
+  "plugins" : ["syntax-decorators", "transform-class-properties", "transform-runtime"],
+  "presets": [
+    "react",
+    "stage-0",
+    "es2015",
+    [
+      "env", {
+        "targets": {
+          "browsers": ["last 2 versions" ]
+        }
+      }
+    ]
+  ]
+}

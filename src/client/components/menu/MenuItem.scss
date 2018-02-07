@@ -1,0 +1,35 @@
+@import 'partials/colors';
+
+.item {
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  color: $dark-blue;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  margin: 0 10px;
+  transition: 0.3s all ease-in-out;
+}
+
+.item:hover {
+  border-bottom: 2px solid $dark-blue;
+  
+  a {
+    color: $dark-blue;
+  }
+}
+
+.item a {
+  color: $dark-blue;
+  font-size: 24px;
+  text-decoration: none;
+  transition: 0.3s all ease-in-out;
+}
+
+.active {
+  border-bottom: 2px solid $dark-blue;
+  
+  a {
+    color: $dark-blue;
+  }
+}
