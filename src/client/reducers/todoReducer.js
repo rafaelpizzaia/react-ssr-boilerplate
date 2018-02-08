@@ -51,7 +51,7 @@ export const fetchTodos = () => async (dispatch, getState, api) => {
       dispatch({
         type: TODO,
         payload: {
-          todos: ['todo_1', 'todo_2'],
+          todos: ['first todo', 'second todo', 'third todo'],
         },
       });
       resolve();

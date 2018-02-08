@@ -22,7 +22,15 @@ const Home = (props) => {
 
   return (
     <div className={styles.home}>
-      This page fetch data on client!
+      <span>This page fetch data on client!</span>
+
+      <br />
+      <br />
+
+      <span>Todos List:</span>
+      <ul>
+        {todos.map(todo => <li key={`todo_${todo}`}>{todo}</li>)}
+      </ul>
     </div>
   );
 };
