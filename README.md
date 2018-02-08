@@ -21,7 +21,7 @@
 
 ### IMPORTANT! ###
 
-* If you're contributing with this project, it's recommended that you know:
+* If you're using or contributing with this project, it's recommended that you know:
 
 * [React](https://reactjs.org/)
 * [Redux](https://redux.js.org/)
