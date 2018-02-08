@@ -21,14 +21,8 @@ class HomePage extends Component {
   }
 }
 
-// Use the loadData function to fetch data on server!
-function loadData({ dispatch }) {
-  return dispatch(fetchTodos());
-}
-
 const mapDispatchToProps = { fetchTodos };
 
 export default {
-  loadData,
   component: connect(null, mapDispatchToProps)(HomePage),
 };

@@ -1,0 +1,28 @@
+.loader {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  > img {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: spin;
+    height: 150px;
+    width: 150px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
