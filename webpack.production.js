@@ -1,6 +1,9 @@
+const ChunkManifestPlugin = require('chunk-manifest-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 const optimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
@@ -40,17 +43,17 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.NoErrorsPlugin(),
     new ExtractTextPlugin('style.css'),
+    new ManifestPlugin(),
+    new ChunkManifestPlugin({
+      filename: "chunk-manifest.json",
+      manifestVariable: "webpackManifest"
+    }),
     new optimizeCssAssetsWebpackPlugin({
       cssProcessorOptions: { discardComments: {removeAll: true } }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      output: {
-        comments: false
-      },
-      mangle: false,
-      sourceMap: true
-    }),
+    new UglifyJSPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
       'env': JSON.stringify('production')
