@@ -5,6 +5,8 @@ const webpackNodeExternals = require('webpack-node-externals');
 
 module.exports = function() {
   const env = process.env.NODE_ENV || 'development';
+  const folder = env === 'production' ? 'build-prod' : 'build' ;
+
   const webpackConfigPath = path.resolve(__dirname, `webpack.${env}.js`);
   const baseConfig = require(webpackConfigPath);
 
@@ -15,11 +17,11 @@ module.exports = function() {
 
     output: {
       filename: 'bundle.js',
-      path: path.resolve(__dirname, 'build'),
+      path: path.resolve(__dirname, folder),
     },
 
     plugins: [
-      new cleanWebpackPlugin(['build'], {
+      new cleanWebpackPlugin([folder], {
         root: path.resolve(__dirname),
         verbose: true
       }),

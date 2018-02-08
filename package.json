@@ -8,8 +8,9 @@
   "license": "MIT",
   "scripts": {
     "build": "npm-run-all build:*",
-    "build:build-server": "cross-env NODE_ENV=production webpack --config webpack.server.js",
     "build:build-client": "cross-env NODE_ENV=production webpack --config webpack.client.js",
+    "build:build-server": "cross-env NODE_ENV=production webpack --config webpack.server.js",
+    "build:run-server": "node build-prod/bundle.js",
     "dev": "npm-run-all --parallel dev:*",
     "dev:build-server": "cross-env NODE_ENV=development webpack --config webpack.server.js --watch",
     "dev:build-client": "cross-env NODE_ENV=development webpack --config webpack.client.js --watch",

@@ -10,7 +10,7 @@ import Routes from './client/Routes';
 
 const app = express();
 
-app.use(express.static('public'));
+app.use(express.static(process.env.NODE_ENV === 'production' ? 'public-prod' : 'public'));
 
 app.use('/api', proxy('https://localhost:7000', { // Setup your backend url here!
   proxyReqOptDecorator(header) {

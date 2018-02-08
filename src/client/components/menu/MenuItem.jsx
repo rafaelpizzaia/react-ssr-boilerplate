@@ -24,7 +24,7 @@ const MenuItem = (props) => {
 
   // <a> tag will navigate through server
   return (
-    <li className={`${styles.item} ${pathname === to ? styles.active : ''}`}>
+    <li className={`${styles.item} ${pathname === href ? styles.active : ''}`}>
       <a className={styles.link} href={href}>{children}</a>
     </li>
   );
